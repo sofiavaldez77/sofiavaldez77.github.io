@@ -284,6 +284,17 @@ nav .container {
   width: 100%; display: block;
   background: #000; border: none;
 }
+/* Landscape video container (for presentation recordings) */
+.video-landscape {
+  width: 100%; height: 100%;
+  border-radius: 14px; overflow: hidden;
+  background: #000;
+}
+.video-landscape iframe {
+  width: 100%; height: 100%;
+  display: block; border: none;
+}
+
 .phone-coming-soon {
   border-radius: 28px;
   background: #1c1c1e;
@@ -672,7 +683,7 @@ footer {
     </div>
     <div class="hero-text">
       <div class="overline">UX Researcher &amp; Product Designer</div>
-      <h1>Dr. Sofia Valdez</h1>
+      <h1>Sofia Valdez</h1>
       <p class="tagline">Research-led. Strategy-aligned. Human-first.</p>
       <p class="hero-creds">
         <strong>PhD</strong>, Mechanical Engineering (Human-AI Interactive Design) &nbsp;·&nbsp;
@@ -680,7 +691,7 @@ footer {
         <strong>Minor</strong>, Business Foundations
       </p>
       <p class="bio">
-        I bridge what companies want to build with how their users actually experience it, balancing creative thinking with engineering structure, business context, and research rigor to ground design decisions in evidence and real-world constraints.
+        I bridge what companies want to build with how their users actually experience it, balancing creative thinking with engineering structure, a business lens, and research rigor to ground design decisions in evidence and real-world constraints.
       </p>
       <div class="hero-links">
         <a href="#work" class="btn btn-primary">View My Work ↓</a>
@@ -717,9 +728,9 @@ footer {
           <span class="tag">Interaction Design</span>
         </div>
       </div>
-      <h3 class="case-title">More Agency in Human-AI Design Tools Doesn't Mean Better Outcomes. Here's Why.</h3>
+      <h3 class="case-title">PhD Research: More Interactivity in Human-AI Design Tools Doesn't Mean Better Outcomes. Here's Why.</h3>
       <p class="case-tldr">
-        <strong>TLDR:</strong> I built an interactive AI-powered structural design tool from scratch, generating my own dataset, training a generative AI model, and developing a suite of real-time latent-space interaction tools. The goal was to make topology optimization interactive so designers could achieve holistic solutions beyond just structural performance. I then ran a controlled study with 79 participants to evaluate how this interactivity shaped human-AI collaboration. The counterintuitive finding: higher interactivity doesn't automatically mean higher perceived agency or improved design outcomes like satisfaction and accuracy. What matters most is how the level of authorship users actually experience compares to what they expected going in.
+        <strong>TLDR:</strong> I built an interactive AI-powered structural design tool from scratch, generating my own dataset, training a generative AI model, and developing a suite of real-time interaction tools. The goal was to make topology optimization (a computational method for generating lightweight, structurally efficient designs) interactive, so designers could steer the AI toward holistic solutions rather than just selecting from what it produced. I then ran a controlled mixed-methods study with 79 participants, combining quantitative behavioral metrics with thematic and sentiment analysis of participant feedback. The counterintuitive finding: higher interactivity doesn't automatically mean higher perceived control or improved design outcomes like satisfaction and accuracy. What matters most is how the level of authorship users actually experience compares to what they expected going in.
       </p>
       <div class="case-metric">
         <span class="num">79</span>
@@ -757,19 +768,19 @@ footer {
       <div class="case-eyebrow">
         <span class="case-label">Case 01</span>
         <div class="case-tags">
-          <span class="tag">Observational Interviews</span>
-          <span class="tag">Moderated Usability Studies</span>
+          <span class="tag">Think-Aloud Usability Sessions</span>
           <span class="tag">Competitive Benchmarking</span>
           <span class="tag">Conversion Optimization</span>
+          <span class="tag">Thematic Analysis</span>
         </div>
       </div>
-      <h3 class="case-title">From "Definitely a Scam" to 2.5x Onboarding-to-Checkout Conversion</h3>
+      <h3 class="case-title">From "Definitely a Scam" to 2.5x Onboarding &amp; Checkout Conversion</h3>
       <p class="case-tldr">
-        <strong>TLDR:</strong> Panda Mobile brought me in to redesign their onboarding funnel with a goal of doubling conversion. Through in-depth customer interviews and moderated usability sessions, I found two things driving drop-off: an intent mismatch between what the ads promised and what the funnel delivered, and an overall ad-to-onboarding experience that incited hesitation and distrust at every stage. Rather than redesigning the funnel in isolation, I mapped the entire acquisition journey from ad to checkout and went beyond scope to collaborate with the marketing team alongside product, addressing trust and intent at every touchpoint. The onboarding redesign alone drove a 2.5x conversion lift in under a month.
+        <strong>TLDR:</strong> Panda Mobile brought me in to redesign their onboarding funnel with a goal of doubling conversion. Through think-aloud usability sessions where customers walked through the product out loud, I found two things driving drop-off: an intent mismatch between what the ads promised and what the funnel delivered, and an overall ad-to-onboarding experience that incited hesitation and distrust at every stage. Rather than redesigning the funnel in isolation, I mapped the entire acquisition journey from ad to checkout and went beyond scope to collaborate with the marketing team alongside product, addressing trust and intent at every touchpoint. The onboarding redesign alone drove a 2.5x conversion lift in under a month.
       </p>
       <div class="case-metric">
         <span class="num">2.5×</span>
-        <span class="label">onboarding-to-checkout conversion lift, implemented in under one month</span>
+        <span class="label">onboarding &amp; checkout conversion lift, implemented in under one month</span>
       </div>
       <div class="case-media">
         <div class="slides-wrap">
@@ -782,8 +793,7 @@ footer {
           </iframe>
         </div>
         <div class="phone-wrap">
-          <div class="phone-frame">
-            <div class="phone-notch"></div>
+          <div class="video-landscape">
             <iframe
               src="https://www.youtube.com/embed/e8YVv-jwl4o"
               title="Case 01 — Panda Mobile presentation"
@@ -820,11 +830,11 @@ footer {
       </div>
       <h3 class="case-title">What Started as Landing Page Testing Ended Up Shaping a Brand</h3>
       <p class="case-tldr">
-        <strong>TLDR:</strong> What started as audience testing of landing page variations for a newly defined target audience turned into something much bigger. Within the first four interviews of a 50-person study, I realized the insights had implications well beyond the original brief. After navigating early stakeholder resistance, I expanded the research scope to explore carrier switching motivations, pricing sensitivities, and feature preferences across Panda Mobile's core audience. I built strategy around what the team already had rather than adding net-new resources, turning constraints into advantages. One example: the team assumed their audience preferred family plans. The interviews said otherwise. That insight became the "Bye Bye Family Plan!" campaign, turning the lack of family plans into a competitive edge. Most of those recommendations were implemented, and the brand still reflects them.
+        <strong>TLDR:</strong> Four interviews in, I knew the research had potential well beyond the original brief. Panda Mobile had just defined their target audience for the first time, and I had recruited 50+ people from that audience to test landing page variations. But what I was hearing from participants had implications across product, marketing, and brand strategy that were too valuable to leave on the table. After navigating early stakeholder resistance, I expanded the scope and changed the interview questions to explore carrier switching motivations, pricing sensitivities, and feature preferences. I built strategy around what the team already had rather than adding net-new resources, turning constraints into advantages. One example: the team assumed their audience preferred family plans and were planning to build them out, a significant engineering investment. The interviews said otherwise. That insight became the "Bye Bye Family Plan!" campaign, turning the lack of family plans into a competitive edge. Most of those recommendations were implemented, and the brand still reflects them.
       </p>
       <div class="case-metric">
         <span class="num">50+</span>
-        <span class="label">interviews recruited in under 48 hours, with findings that shaped brand, product, and marketing strategy</span>
+        <span class="label">interviews recruited in under 48 hours, with recommendations implemented across brand, product, and marketing that the team still references today</span>
       </div>
       <div class="case-media">
         <div class="slides-placeholder">
@@ -858,7 +868,7 @@ footer {
     <p class="section-label">How I Work</p>
     <h2 class="section-title">My Research &amp; Design Process</h2>
     <p class="section-subtitle">
-      People ask what mechanical engineering has to do with UX. The answer is everything. ME is hardware, and when something ships, you can't patch it in production. That puts a serious premium on understanding user needs before a decision gets made, and doing it rigorously. The process I use is adapted from that training, and it applies well beyond hardware to digital products, brand strategy, or any problem where the goal is a better outcome for a real person.
+      People ask what mechanical engineering has to do with UX. The answer is everything. In hardware, once a product is manufactured and in someone's hands, there's no update you can push to fix a design mistake. That puts a serious premium on understanding user needs before a decision gets made, and doing it rigorously. The process I use is adapted from that training, and it applies well beyond hardware to digital products, brand strategy, or any problem where the goal is a better outcome for a real person.
     </p>
     <div class="process-flow">
       <div class="process-step">
@@ -934,6 +944,7 @@ footer {
         <div class="step-terms">
           <span class="step-term">Usability Testing</span>
           <span class="step-term">A/B Testing</span>
+          <span class="step-term">Product Analytics</span>
           <span class="step-term">Design Revisions</span>
         </div>
       </div>
@@ -963,11 +974,11 @@ footer {
       <div class="rec-card">
         <div class="rec-quote-mark">"</div>
         <p class="rec-text">
-          One of the best sets of insights I've encountered in a dissertation.
+          Sofia is one of the best PhD students I've advised in my 20 year career. Her mastery of ML/AI and its application to practical applications in engineering design is impeccable. But what truly sets her apart is her ability to extract useful, relevant insights from her computational work. She is a rising star of her generation, and I can't wait to see the impacts she will make throughout her career.
         </p>
         <div class="rec-author">
           <div class="rec-name">Carolyn Conner Seepersad, PhD</div>
-          <div class="rec-role">Eugene C. Gwaltney, Jr. School Chair · Editor-in-Chief, Journal of Mechanical Design · Georgia Institute of Technology</div>
+          <div class="rec-role">Editor-in-Chief, Journal of Mechanical Design · Eugene C. Gwaltney, Jr. School Chair, Georgia Institute of Technology</div>
         </div>
       </div>
       <div class="rec-card">
@@ -992,7 +1003,7 @@ footer {
     <div class="about-body">
     <div class="about-text">
       <p>
-        I've always had a passion for creating and design, which is actually what drew me to mechanical engineering in the first place. What I didn't expect was that the part of the design process I'd come to love most wasn't the building — it was the conversations before anything got built. Every project I worked on came back to the same question: what do people actually need here? And it turns out mechanical engineering was about the most rigorous training I could have had for that instinct. Hardware ships without a patch cycle, so the field puts a serious premium on deeply understanding user needs before committing to a direction, and doing it systematically.
+        I've always had a passion for creating and design, which is actually what drew me to mechanical engineering in the first place. What I didn't expect was that the part of the design process I'd come to love most wasn't the building — it was the conversations before anything got built. Every project I worked on came back to the same question: what do people actually need here? And it turns out mechanical engineering was about the most rigorous training I could have had for that instinct. In hardware, once a product is manufactured and in someone's hands, you can't push an update to fix a design mistake. That puts a serious premium on deeply understanding user needs before committing to a direction, and doing it systematically.
       </p>
       <p>
         By the end of my undergrad, I had developed a specific design interest I couldn't shake: as AI started entering the design process, I wanted to understand what that would mean for the human's role in it. So before ChatGPT or Claude existed, that curiosity pushed me toward a PhD in human-AI interactive design, where I ended up building and evaluating an AI-powered generative design framework from the ground up. What I found was that design outcomes in human-AI collaboration aren't just about how interactive we build the human-AI tools to be. They're shaped by what people expect their role in that collaboration to be, and how that expectation is met.
@@ -1073,13 +1084,13 @@ footer {
           <span class="course-item">Architecture &amp; Society</span>
           <span class="course-item">How Things Work</span>
           <span class="course-item">Engineering Communication</span>
-          <span class="course-item">Additive Manufacturing</span>
+          <span class="course-item">Additive Design &amp; Manufacturing</span>
           <span class="course-item">Medical Device Design &amp; Manufacturing</span>
-          <span class="course-item">Projects in Mechanical Engineering (Startup)</span>
+          <span class="course-item">Projects in M.E. (Startup)</span>
           <span class="course-item">Introduction to Engineering Design &amp; Graphics</span>
           <span class="course-item">Engineering Design Theory &amp; Math Techniques</span>
-          <span class="course-item">Mechanical Engineering Design Methodology (Capstone I)</span>
-          <span class="course-item">Mechanical Engineering Design Project (Capstone II)</span>
+          <span class="course-item">M.E. Design Methodology (Capstone I)</span>
+          <span class="course-item">M.E. Design Project (Capstone II)</span>
         </div>
       </div>
 
