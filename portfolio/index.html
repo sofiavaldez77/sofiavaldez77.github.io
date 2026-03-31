@@ -650,6 +650,67 @@ footer {
   .logo-row { gap: 2rem; }
 }
 
+/* ── Feedback ────────────────────────────────────── */
+.feedback-section {
+  padding: 5rem 0;
+  background: #f4f2ef;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  text-align: center;
+}
+.feedback-section .section-subtitle {
+  margin: 0 auto 2.5rem;
+  max-width: 540px;
+}
+.feedback-form {
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.feedback-field { display: flex; flex-direction: column; gap: 0.55rem; }
+.feedback-label {
+  font-size: 0.9rem; font-weight: 600; color: #1a1a1e; line-height: 1.45;
+}
+.feedback-label .optional { font-weight: 400; color: #bbb; font-size: 0.8rem; margin-left: 0.3em; }
+.star-rating { display: flex; gap: 0.25rem; }
+.star {
+  font-size: 2rem; color: #dedad5;
+  background: none; border: none; cursor: pointer;
+  padding: 0 0.1rem; line-height: 1;
+  transition: color 0.12s, transform 0.1s;
+}
+.star.lit { color: #B8737E; }
+.star:hover { transform: scale(1.15); }
+.feedback-textarea {
+  width: 100%; min-height: 96px;
+  border-radius: 10px; border: 1.5px solid #d4d0cb;
+  padding: 0.85rem 1rem;
+  font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #1a1a1e;
+  background: #fff; resize: vertical; outline: none;
+  transition: border-color 0.2s; line-height: 1.65;
+}
+.feedback-textarea:focus { border-color: #B8737E; }
+.feedback-textarea::placeholder { color: #c4c0bb; }
+.feedback-submit-row {
+  display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+}
+.feedback-anon-note {
+  font-size: 0.75rem; color: #bbb; letter-spacing: 0.02em;
+}
+.feedback-success {
+  max-width: 520px; margin: 0 auto;
+  padding: 2rem 1.5rem; border-radius: 14px;
+  background: rgba(184,115,126,0.07);
+  border: 1px solid rgba(184,115,126,0.18);
+  text-align: center;
+}
+.feedback-success p {
+  font-family: 'Playfair Display', serif;
+  font-style: italic; font-size: 1.1rem; color: #B8737E;
+}
+
 </style>
 </head>
 <body>
@@ -964,7 +1025,7 @@ footer {
       <div class="rec-card">
         <div class="rec-quote-mark">"</div>
         <p class="rec-text">
-          We brought Sofia on as an unpaid intern to work on our onboarding funnel. What we got was something closer to a brand strategist, UX researcher, and product designer rolled into one. She didn't just redesign the funnel. She rethought our entire acquisition experience from landing page through onboarding, then took her own initiative to go deeper on target audience research. The insights she surfaced shaped decisions across brand, product, and marketing that are still being referenced over a year later.
+          We brought Sofia on as an unpaid intern to work on our onboarding funnel. What we got was something closer to a UX researcher, product designer, and brand strategist rolled into one. She didn't just redesign the funnel. She rethought our entire acquisition experience from landing page through onboarding, then took her own initiative to go deeper on target audience research. The insights she surfaced shaped decisions across brand, product, and marketing that are still being referenced over a year later.
         </p>
         <div class="rec-author">
           <div class="rec-name">Roger Morris</div>
@@ -1147,7 +1208,7 @@ footer {
     <p class="section-label">Let's Connect</p>
     <h2 class="section-title">Interested in Working Together?</h2>
     <p class="section-subtitle">
-      I'm open to full-time roles and research consulting. The best way to reach me is by email.
+      I'm open to full-time roles and research &amp; design consulting. The best way to reach me is by email.
     </p>
     <div class="contact-links">
       <a href="mailto:sofiavaldez77@gmail.com" class="contact-pill">
@@ -1173,12 +1234,108 @@ footer {
   </div>
 </section>
 
+<!-- ═══════  FEEDBACK  ═══════ -->
+<section class="feedback-section" id="feedback">
+  <div class="container">
+    <p class="section-label">Help Me Improve</p>
+    <h2 class="section-title">Leave Anonymous Feedback</h2>
+    <p class="section-subtitle">
+      Two questions. Completely anonymous, goes straight to my inbox. As a UX researcher &amp; designer, I iterate on everything, including this.
+    </p>
+
+    <form class="feedback-form" id="feedbackForm">
+      <div class="feedback-field">
+        <label class="feedback-label">How clearly does this portfolio communicate my value as a UX researcher &amp; designer?</label>
+        <div class="star-rating" id="starRating" role="radiogroup" aria-label="Rating out of 5">
+          <button type="button" class="star" data-value="1" aria-label="1 star">★</button>
+          <button type="button" class="star" data-value="2" aria-label="2 stars">★</button>
+          <button type="button" class="star" data-value="3" aria-label="3 stars">★</button>
+          <button type="button" class="star" data-value="4" aria-label="4 stars">★</button>
+          <button type="button" class="star" data-value="5" aria-label="5 stars">★</button>
+        </div>
+        <input type="hidden" name="rating" id="ratingInput">
+      </div>
+
+      <div class="feedback-field">
+        <label class="feedback-label" for="feedbackText">
+          What would make it stronger? <span class="optional">Optional</span>
+        </label>
+        <textarea
+          class="feedback-textarea"
+          id="feedbackText"
+          name="feedback"
+          placeholder="Anything — brutal honesty is most helpful"></textarea>
+      </div>
+
+      <div class="feedback-submit-row">
+        <button type="submit" class="btn btn-primary">Send Feedback →</button>
+        <span class="feedback-anon-note">Anonymous · straight to Sofia's inbox</span>
+      </div>
+    </form>
+
+    <div class="feedback-success" id="feedbackSuccess" style="display:none;">
+      <p>Thank you — this is genuinely helpful.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════  FOOTER  ═══════ -->
 <footer>
   <div class="container">
     &copy; 2026 Dr. Sofia Valdez &mdash; Designed with intention. Built with Claude.
   </div>
 </footer>
+
+<script>
+  // ── Star rating & feedback form ──────────────────────────────────────────
+  (function () {
+    const stars       = document.querySelectorAll('#starRating .star');
+    const ratingInput = document.getElementById('ratingInput');
+    const form        = document.getElementById('feedbackForm');
+    const success     = document.getElementById('feedbackSuccess');
+    let selected      = 0;
+
+    function lightStars(upTo) {
+      stars.forEach(function (s) {
+        s.classList.toggle('lit', parseInt(s.dataset.value) <= upTo);
+      });
+    }
+
+    stars.forEach(function (star) {
+      star.addEventListener('mouseenter', function () {
+        lightStars(parseInt(this.dataset.value));
+      });
+      star.addEventListener('click', function () {
+        selected = parseInt(this.dataset.value);
+        ratingInput.value = selected;
+        lightStars(selected);
+      });
+    });
+
+    document.getElementById('starRating').addEventListener('mouseleave', function () {
+      lightStars(selected);
+    });
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const payload = {
+        rating:   ratingInput.value ? ratingInput.value + ' / 5' : 'Not rated',
+        feedback: document.getElementById('feedbackText').value.trim() || '(none)'
+      };
+      try {
+        const res = await fetch('https://formspree.io/f/xojpwrpq', {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body:    JSON.stringify(payload)
+        });
+        if (res.ok) {
+          form.style.display    = 'none';
+          success.style.display = 'block';
+        }
+      } catch (_) { /* silent — form stays visible if network fails */ }
+    });
+  })();
+</script>
 
 </body>
 </html>
