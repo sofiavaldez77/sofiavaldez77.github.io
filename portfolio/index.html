@@ -653,13 +653,16 @@ footer {
 /* ── Feedback ────────────────────────────────────── */
 .feedback-section {
   padding: 5rem 0;
-  background: #f4f2ef;
-  border-top: 1px solid rgba(0,0,0,0.06);
+  background: #1a1a1e;
+  border-top: 1px solid rgba(0,0,0,0.12);
   text-align: center;
 }
+.feedback-section .section-label { color: rgba(184,115,126,0.85); }
+.feedback-section .section-title { color: #fff; }
 .feedback-section .section-subtitle {
   margin: 0 auto 2.5rem;
   max-width: 540px;
+  color: rgba(255,255,255,0.55);
 }
 .feedback-form {
   max-width: 520px;
@@ -671,12 +674,12 @@ footer {
 }
 .feedback-field { display: flex; flex-direction: column; gap: 0.55rem; }
 .feedback-label {
-  font-size: 0.9rem; font-weight: 600; color: #1a1a1e; line-height: 1.45;
+  font-size: 0.9rem; font-weight: 600; color: rgba(255,255,255,0.8); line-height: 1.45;
 }
-.feedback-label .optional { font-weight: 400; color: #bbb; font-size: 0.8rem; margin-left: 0.3em; }
+.feedback-label .optional { font-weight: 400; color: rgba(255,255,255,0.28); font-size: 0.8rem; margin-left: 0.3em; }
 .star-rating { display: flex; gap: 0.25rem; }
 .star {
-  font-size: 2rem; color: #dedad5;
+  font-size: 2rem; color: rgba(255,255,255,0.15);
   background: none; border: none; cursor: pointer;
   padding: 0 0.1rem; line-height: 1;
   transition: color 0.12s, transform 0.1s;
@@ -685,7 +688,7 @@ footer {
 .star:hover { transform: scale(1.15); }
 .feedback-textarea {
   width: 100%; min-height: 96px;
-  border-radius: 10px; border: 1.5px solid #d4d0cb;
+  border-radius: 10px; border: 1.5px solid rgba(255,255,255,0.1);
   padding: 0.85rem 1rem;
   font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #1a1a1e;
   background: #fff; resize: vertical; outline: none;
@@ -697,13 +700,13 @@ footer {
   display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
 }
 .feedback-anon-note {
-  font-size: 0.75rem; color: #bbb; letter-spacing: 0.02em;
+  font-size: 0.75rem; color: rgba(255,255,255,0.3); letter-spacing: 0.02em;
 }
 .feedback-success {
   max-width: 520px; margin: 0 auto;
   padding: 2rem 1.5rem; border-radius: 14px;
-  background: rgba(184,115,126,0.07);
-  border: 1px solid rgba(184,115,126,0.18);
+  background: rgba(184,115,126,0.1);
+  border: 1px solid rgba(184,115,126,0.25);
   text-align: center;
 }
 .feedback-success p {
