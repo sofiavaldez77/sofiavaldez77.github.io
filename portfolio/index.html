@@ -252,8 +252,8 @@ nav .container {
   align-items: center; justify-content: center;
   gap: 0.75rem; color: #bbb;
 }
-.slides-placeholder .ph-icon { font-size: 1.7rem; opacity: 0.45; }
-.slides-placeholder p { font-size: 0.8rem; letter-spacing: 0.04em; }
+.slides-placeholder .ph-icon { font-size: 2.2rem; opacity: 0.55; }
+.slides-placeholder p { font-size: 0.85rem; letter-spacing: 0.04em; }
 
 /* Phone wrapper — same height as slides, centers the phone */
 .phone-wrap {
@@ -301,16 +301,16 @@ nav .container {
   aspect-ratio: 9 / 16;
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
-  gap: 0.8rem; color: rgba(255,255,255,0.32);
+  gap: 0.8rem; color: rgba(255,255,255,0.55);
 }
 .phone-coming-soon .cs-play {
-  width: 42px; height: 42px; border-radius: 50%;
-  border: 1.5px solid rgba(255,255,255,0.15);
+  width: 48px; height: 48px; border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.35);
   display: flex; align-items: center; justify-content: center;
-  font-size: 0.9rem; padding-left: 3px;
+  font-size: 1rem; padding-left: 3px;
 }
 .phone-coming-soon p {
-  font-size: 0.68rem; text-align: center;
+  font-size: 0.78rem; text-align: center;
   letter-spacing: 0.04em; line-height: 1.5;
 }
 
@@ -330,19 +330,19 @@ nav .container {
 
 /* Improved coming-soon states */
 .slides-placeholder .ph-title {
-  font-size: 0.88rem; font-weight: 600; color: #999;
+  font-size: 1rem; font-weight: 600; color: #777;
 }
 .slides-placeholder .ph-sub {
-  font-size: 0.75rem; color: #bbb; letter-spacing: 0.04em;
+  font-size: 0.82rem; color: #aaa; letter-spacing: 0.04em;
 }
 .phone-coming-soon .cs-title {
-  font-size: 0.75rem; font-weight: 600;
+  font-size: 0.85rem; font-weight: 600;
   text-align: center; line-height: 1.4;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.7);
 }
 .phone-coming-soon .cs-sub {
-  font-size: 0.68rem; letter-spacing: 0.06em;
-  text-transform: uppercase; color: rgba(255,255,255,0.25);
+  font-size: 0.72rem; letter-spacing: 0.06em;
+  text-transform: uppercase; color: rgba(255,255,255,0.4);
 }
 
 /* Canva fallback link */
@@ -613,41 +613,72 @@ footer {
 }
 @media (max-width: 960px) {
   .hero .container { grid-template-columns: 1fr; gap: 2.5rem; }
-  .about-body { grid-template-columns: 1fr; gap: 2.5rem; }
   .hero { min-height: auto; padding: 6rem 0 3rem; }
   .hero-photo { height: clamp(260px, 55vw, 420px); }
   .hero-text h1 { font-size: 2.5rem; }
+  .about-body { grid-template-columns: 1fr; gap: 2.5rem; }
+  .case-card { padding: 3rem 0; }
   .case-media { grid-template-columns: 1fr; }
   .media-labels { grid-template-columns: 1fr; }
   .slides-wrap, .slides-placeholder { height: 320px; }
+  .video-landscape { height: 260px; }
   .phone-wrap { height: auto; padding: 2rem 0; }
   .phone-frame { width: 200px; }
   .process-flow { grid-template-columns: repeat(4, 1fr); row-gap: 2.5rem; }
   .process-flow::before { display: none; }
+  .process { padding: 4rem 0; }
   .about-right { gap: 1.2rem; }
   .about-photo-top img { height: 180px; }
   .about-photo-pair img { height: 140px; }
+  .work-header { padding: 3.5rem 0 2.5rem; }
 }
 @media (max-width: 640px) {
+  .container { padding: 0 1.25rem; }
   .nav-links { display: none; }
   .nav-links.open {
     display: flex; flex-direction: column;
     position: absolute; top: 64px; left: 0; right: 0;
     background: rgba(250,249,247,0.97); backdrop-filter: blur(20px);
-    padding: 1.5rem 2rem; gap: 1.2rem;
+    padding: 1.5rem 1.25rem; gap: 1.2rem;
     border-bottom: 1px solid rgba(0,0,0,0.06);
   }
   .nav-toggle { display: block; }
   .hero-text h1 { font-size: 2rem; }
+  .hero-text .tagline { font-size: 1.05rem; }
   .section-title { font-size: 1.75rem; }
-  .about-highlights { grid-template-columns: 1fr; }
+  .section-subtitle { font-size: 0.93rem; }
+  .case-card { padding: 2.5rem 0; }
+  .case-title { font-size: 1.45rem; }
+  .case-tldr { font-size: 0.9rem; }
+  .work-header { padding: 3rem 0 2rem; }
+  .process { padding: 3.5rem 0; }
+  .process-flow { grid-template-columns: repeat(2, 1fr); row-gap: 2rem; }
+  .recommendations { padding: 3rem 0; }
+  .rec-grid { grid-template-columns: 1fr; }
+  .rec-grid .rec-card:nth-child(3) { grid-column: span 1; }
+  .about { padding: 4rem 0; }
+  .about-highlights { grid-template-columns: 1fr 1fr; }
   .about-photo-top img { height: 200px; }
   .about-photo-pair { grid-template-columns: 1fr 1fr; }
   .about-photo-pair img { height: 160px; }
-  .rec-grid { grid-template-columns: 1fr; }
-  .rec-grid .rec-card:nth-child(3) { grid-column: span 1; }
-  .process-flow { grid-template-columns: repeat(2, 1fr); row-gap: 2rem; }
-  .logo-row { gap: 2rem; }
+  .proof { padding: 3rem 0; }
+  .logo-row { gap: 1.2rem; flex-direction: column; align-items: center; }
+  .logo-placeholder { font-size: 0.88rem; }
+  .coursework-section { padding: 2.5rem 0; }
+  .resume-section { padding: 3.5rem 0; }
+  .resume-embed-wrap { height: 420px; }
+  .contact { padding: 4rem 0; }
+  .contact-links { flex-direction: column; align-items: center; }
+  .contact-pill { width: 100%; max-width: 320px; justify-content: center; }
+  .feedback-section { padding: 3.5rem 0; }
+  .feedback-form { gap: 1.2rem; }
+}
+@media (max-width: 420px) {
+  .hero-text h1 { font-size: 1.8rem; }
+  .section-title { font-size: 1.55rem; }
+  .about-highlights { grid-template-columns: 1fr; }
+  .process-flow { grid-template-columns: 1fr; row-gap: 1.5rem; }
+  .slides-wrap, .slides-placeholder { height: 260px; }
 }
 
 /* ── Feedback ────────────────────────────────────── */
@@ -1049,11 +1080,11 @@ footer {
       <div class="rec-card">
         <div class="rec-quote-mark">"</div>
         <p class="rec-text">
-          [ Coming soon ]
+          Sofia is an exceptional UX researcher and designer who brings a rigorous engineering mindset to complex product problems, as shown in her Panda Mobile case study where she tackled trust, targeting, and funnel performance end-to-end. Any team looking for a UX researcher who can own messy, ambiguous problems, communicate clearly with executives, and turn user insight into actionable, feasible design requirements would be lucky to work with Sofia.
         </p>
         <div class="rec-author">
-          <div class="rec-name">[ Name ]</div>
-          <div class="rec-role">[ Title, Company ]</div>
+          <div class="rec-name">Andrie Lin</div>
+          <div class="rec-role">VP Program Management, MVNO Connect</div>
         </div>
       </div>
     </div>
